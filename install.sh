@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
-# install.sh — One-line installer for Rift shell-harness
+# install.sh — One-line installer for Rift
 # Supports Ubuntu, Debian, Fedora, Arch, Alpine, and WSL
 set -euo pipefail
 
 BASE_URL="${BASE_URL:-https://dull-eggs-prove.loca.lt}"
-TARGET="/usr/local/bin/shell-harness"
-BINARY="shell-harness"
+TARGET="/usr/local/bin/rift"
+BINARY="rift"
 
-echo "🔽 Installing rift shell-harness..."
+echo "🔽 Installing rift..."
 
 # Detect OS / architecture
 arch=$(uname -m)
@@ -36,7 +36,7 @@ if [[ "$(id -u)" -eq 0 ]] || sudo -n true >/dev/null 2>&1; then
   sudo mv "$tmp_file" "$TARGET"
 else
   echo "⚠️  Non-root user. Installing to $home/.local/bin/"
-  TARGET="$home/.local/bin/shell-harness"
+  TARGET="$home/.local/bin/rift"
   target_dir="$home/.local/bin"
   mkdir -p "$target_dir"
   cp "$tmp_file" "$TARGET"
@@ -54,6 +54,6 @@ echo "✅ Installed at: $TARGET"
 echo ""
 echo "Run it with:"
 echo "   export ANTHROPIC_API_KEY='sk-ant-...'"
-echo "   shell-harness"
+echo "   rift"
 echo ""
 echo "Providers: Anthropic · OpenAI · TokenHarbor · OpenRouter"
