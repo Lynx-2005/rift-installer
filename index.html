@@ -70,19 +70,12 @@
 <span class="prompt">$</span> curl -fsSL https://dull-eggs-prove.loca.lt/install.sh | bash
 
 <span class="comment"># Or manual download:</span>
-<span class="prompt">$</span> curl -fsSL -o /usr/local/bin/shell-harness \
-       https://dull-eggs-prove.loca.lt/shell-harness \
-    && chmod +x /usr/local/bin/shell-harness></pre>
+<span class="prompt">$</span> curl -fsSL -o /usr/local/bin/rift \
+     https://dull-eggs-prove.loca.lt/rift \
+   && chmod +x /usr/local/bin/rift</pre>
     <hr>
-    <p class="section-title">Configuration</p>
-    <pre><span class="comment"># Set your API key (pick one):</span>
-<span class="prompt">$</span> <span class="env-var">export</span> ANTHROPIC_API_KEY=<span style="color:#fff">sk-ant-...</span>
-<span class="prompt">$</span> <span class="env-var">export</span> OPENAI_API_KEY=<span style="color:#fff">sk-...</span>
-<span class="prompt">$</span> <span class="env-var">export</span> TOKENHARBOR_API_KEY=<span style="color:#fff">...</span>
-<span class="prompt">$</span> <span class="env-var">export</span> OPENROUTER_API_KEY=<span style="color:#fff">...</span>
-
-<span class="comment"># Run it:</span>
-<span class="prompt">$</span> shell-harness</pre>
+    <pre><span class="comment"># Run it:</span>
+  <span class="prompt">$</span> rift</pre>
     <p style="margin-top:2rem;color:#666;font-size:0.9rem;">
       Providers: <strong>Anthropic</strong> &middot; <strong>OpenAI</strong> &middot; <strong>TokenHarbor</strong> &middot; <strong>OpenRouter</strong>
     </p>
