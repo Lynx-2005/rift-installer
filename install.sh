@@ -3,7 +3,7 @@
 # Supports Ubuntu, Debian, Fedora, Arch, Alpine, and WSL
 set -euo pipefail
 
-BASE_URL="${BASE_URL:-https://dull-eggs-prove.loca.lt}"
+BASE_URL="${BASE_URL:-https://raw.githubusercontent.com/Lynx-2005/rift-installer/main}"
 TARGET="/usr/local/bin/rift"
 BINARY="rift"
 
