@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rift — Terminal Agent</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #0d0d0d;
+      color: #e0e0e0;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+    .container {
+      max-width: 640px;
+      padding: 2rem;
+      text-align: center;
+    }
+    h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+    .tagline { color: #888; font-size: 1.1rem; margin-bottom: 2rem; }
+    .platform-badge {
+      display: inline-block;
+      background: #1a1a2e;
+      border: 1px solid #333;
+      padding: 0.25rem 0.75rem;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      color: #aaa;
+      margin: 0.25rem;
+    }
+    pre {
+      background: #1a1a1a;
+      border: 1px solid #333;
+      border-radius: 8px;
+      padding: 1rem 1.25rem;
+      text-align: left;
+      overflow-x: auto;
+      margin-top: 1.5rem;
+      font-size: 0.95rem;
+    }
+    pre .prompt { color: #0f0; }
+    pre .comment { color: #666; }
+    code { color: #ffeb3b; }
+    hr { border: none; border-top: 1px solid #222; margin: 2rem 0; }
+    .env-var { color: #f06292; }
+    .section-title {
+      font-size: 1.1rem;
+      color: #aaa;
+      margin-bottom: 0.75rem;
+    }
+    a { color: #4fc3f7; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Rift</h1>
+    <p class="tagline">A terminal agent whose tools are the shell, skills on disk, and MCP servers.</p>
+    <div>
+      <span class="platform-badge">Linux</span>
+      <span class="platform-badge">WSL</span>
+      <span class="platform-badge">x86_64</span>
+    </div>
+    <hr>
+    <p class="section-title">Quick Install</p>
+    <pre><span class="comment"># One-line install (Linux + WSL)</span>
+<span class="prompt">$</span> curl -fsSL https://dull-eggs-prove.loca.lt/install.sh | bash
+
+<span class="comment"># Or manual download:</span>
+<span class="prompt">$</span> curl -fsSL -o /usr/local/bin/shell-harness \
+       https://dull-eggs-prove.loca.lt/shell-harness \
+    && chmod +x /usr/local/bin/shell-harness></pre>
+    <hr>
+    <p class="section-title">Configuration</p>
+    <pre><span class="comment"># Set your API key (pick one):</span>
+<span class="prompt">$</span> <span class="env-var">export</span> ANTHROPIC_API_KEY=<span style="color:#fff">sk-ant-...</span>
+<span class="prompt">$</span> <span class="env-var">export</span> OPENAI_API_KEY=<span style="color:#fff">sk-...</span>
+<span class="prompt">$</span> <span class="env-var">export</span> TOKENHARBOR_API_KEY=<span style="color:#fff">...</span>
+<span class="prompt">$</span> <span class="env-var">export</span> OPENROUTER_API_KEY=<span style="color:#fff">...</span>
+
+<span class="comment"># Run it:</span>
+<span class="prompt">$</span> shell-harness</pre>
+    <p style="margin-top:2rem;color:#666;font-size:0.9rem;">
+      Providers: <strong>Anthropic</strong> &middot; <strong>OpenAI</strong> &middot; <strong>TokenHarbor</strong> &middot; <strong>OpenRouter</strong>
+    </p>
+  </div>
+</body>
+</html>
